@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class NewGirlApplication {
 
 	public static void main(String[] args) {
-		System.out.println("springBoot test");
+		System.out.println(" test");
 		SpringApplication.run(NewGirlApplication.class, args);
 	}
 }
