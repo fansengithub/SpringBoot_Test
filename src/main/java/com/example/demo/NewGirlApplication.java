@@ -10,5 +10,6 @@ public class NewGirlApplication {
 		System.out.println(" test!");
 		// springBoot中的启动main()方法
 		SpringApplication.run(NewGirlApplication.class, args);
+		System.out.println("springBoot");
 	}
 }
