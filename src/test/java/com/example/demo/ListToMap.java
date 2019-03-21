@@ -44,7 +44,7 @@ public class ListToMap {
         System.out.println(maps);
 
 
-//        使用stream()流来处理
+//        使用stream()流来处理   ----- 并制定规则，当key重复时，用后面的key值代替。
         Map<Long,MapTestUser> map1 =  userList.stream().collect(Collectors.toMap(MapTestUser :: getId, Function.identity(),(key1,key2) ->key2));
         System.out.println("输出map1:");
         System.out.println(map1);
