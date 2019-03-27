@@ -1,0 +1,6 @@
+server:
+  port: 8080
+girl:
+  cupSize: d
+  age: 24
+#development envirment

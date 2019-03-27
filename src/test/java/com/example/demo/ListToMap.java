@@ -4,11 +4,9 @@ package com.example.demo;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.assertj.core.internal.Maps;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -48,6 +46,11 @@ public class ListToMap {
         Map<Long,MapTestUser> map1 =  userList.stream().collect(Collectors.toMap(MapTestUser :: getId, Function.identity(),(key1,key2) ->key2));
         System.out.println("输出map1:");
         System.out.println(map1);
+
+//        使用stram()流来处理，   ---  当value中不是对象，只是对象中一个属性时。
+        Map<Long,String> map2 = userList.stream().collect(Collectors.toMap(MapTestUser::getId,MapTestUser::getName,(key1,key2) -> key1));
+        System.out.println("输出map2");
+        System.out.println(map2);
 
     }
 
